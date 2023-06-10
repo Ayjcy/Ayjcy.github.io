@@ -108,43 +108,43 @@
 <p>export PYSPARK_PYTHON&#x3D;&#x2F;export&#x2F;server&#x2F;anaconda3&#x2F;envs&#x2F;pyspark&#x2F;bin&#x2F;python</p>
 <p>#SPARK_HOME</p>
 <p>export SPARK_HOME&#x3D;&#x2F;export&#x2F;server&#x2F;spark</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609084345575.png" alt="image-20230609084345575"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609084345575.png" alt="image-20230609084345575"></p>
 <p>（2）安装anaconda</p>
 <p>1）把资源包Anaconda3-2021.05-Linux-x86_64.sh文件放到文件夹下</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609084411296.png" alt="image-20230609084411296"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609084411296.png" alt="image-20230609084411296"></p>
 <p>2）运行Anaconda3-2021.05-Linux-x86_64.sh</p>
 <p>sh .&#x2F;Anaconda3-2021.05-Linux-x86_64.sh</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609084450107.png" alt="image-20230609084450107"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609084450107.png" alt="image-20230609084450107"></p>
 <p>3）输入安装路径</p>
 <p>&#x2F;export&#x2F;server&#x2F;anaconda3</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609084512059.png" alt="image-20230609084512059"></p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609084550347.png" alt="image-20230609084550347"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609084512059.png" alt="image-20230609084512059"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609084550347.png" alt="image-20230609084550347"></p>
 <p>4）安装完成之后重启虚拟机</p>
 <p>看到base（默认的虚拟环境）开头就安装好了</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609084610707.png" alt="image-20230609084610707"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609084610707.png" alt="image-20230609084610707"></p>
 <p>（5）创建虚拟环境</p>
 <p>1）创建虚拟环境 pyspark, 基于Python 3.8</p>
 <p>conda activate base</p>
 <p>conda create -n pyspark python&#x3D;3.8</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609084637161.png" alt="image-20230609084637161"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609084637161.png" alt="image-20230609084637161"></p>
 <p>2）切换到虚拟环境内</p>
 <p>conda activate pyspark</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609084704581.png" alt="image-20230609084704581"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609084704581.png" alt="image-20230609084704581"></p>
 <p>3）在虚拟环境内安装包</p>
 <p>pip install pyhive pyspark jieba -i <a target="_blank" rel="noopener" href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a></p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609084732424.png" alt="image-20230609084732424"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609084732424.png" alt="image-20230609084732424"></p>
 <p>2.安装spark</p>
 <p>1）解压spark包</p>
 <p>tar zxvf spark-3.2.0-bin-hadoop3.2.tgz</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609084815766.png" alt="image-20230609084815766"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609084815766.png" alt="image-20230609084815766"></p>
 <p>2）设置软链接</p>
 <p>ln -s spark-3.2.0-bin-hadoop3.2&#x2F; spark</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609084838652.png" alt="image-20230609084838652"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609084838652.png" alt="image-20230609084838652"></p>
 <p>3）测试</p>
 <p>.&#x2F;pyspark</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609084901456.png" alt="image-20230609084901456"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609084901456.png" alt="image-20230609084901456"></p>
 <p>4）在浏览器内打开网页</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609084920279.png" alt="image-20230609084920279"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609084920279.png" alt="image-20230609084920279"></p>
 <p>二、Spark（Stand Alone）</p>
 <p>部署Spark Stand Alone环境时，需要用到三台linux虚拟机构成，在此以node1、node2、node3为例</p>
 <p>node1运行: Spark的Master进程  和 1个Worker进程</p>
@@ -153,21 +153,21 @@
 <p>1.安装与配置（此处在node1上操作）</p>
 <p>（1）三台虚拟机都需要配置pyspark虚拟环境，以及安装虚拟环境中所需要的包。参考四中的1.基础环境</p>
 <p>（2）进入spark配置文件的目录中</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085130947.png" alt="image-20230609085130947"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085130947.png" alt="image-20230609085130947"></p>
 <p>（3）配置workers文件</p>
 <p>1）改名, 去掉后面的.template后缀</p>
 <p>mv workers.template workers</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085156196.png" alt="image-20230609085156196"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085156196.png" alt="image-20230609085156196"></p>
 <p>2）编辑workers文件</p>
 <p>vim workers</p>
 <p>把localhost删除，在里面追加</p>
 <p>node1</p>
 <p>node2</p>
 <p>node3</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085219358.png" alt="image-20230609085219358"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085219358.png" alt="image-20230609085219358"></p>
 <p>3）配置spark-env.sh文件</p>
 <p>mv spark-env.sh.template spark-env.sh</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085242348.png" alt="image-20230609085242348"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085242348.png" alt="image-20230609085242348"></p>
 <p>在spark-env.sh底下追加以下内容</p>
 <p>## 设置JAVA安装目录</p>
 <p>JAVA_HOME&#x3D;&#x2F;export&#x2F;server&#x2F;jdk</p>
@@ -192,15 +192,15 @@
 <p>## 设置历史服务器</p>
 <p># 配置的意思是  将spark程序运行的历史日志 存到hdfs的&#x2F;sparklog文件夹中</p>
 <p>SPARK_HISTORY_OPTS&#x3D;”-Dspark.history.fs.logDirectory&#x3D;hdfs:&#x2F;&#x2F;node1:8020&#x2F;sparklog&#x2F; -Dspark.history.fs.cleaner.enabled&#x3D;true”</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085325971.png" alt="image-20230609085325971"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085325971.png" alt="image-20230609085325971"></p>
 <p>4）在HDFS上创建用来存放程序运行历史记录的文件夹</p>
 <p>hadoop fs -mkdir &#x2F;sparklog</p>
 <p>hadoop fs -chmod 777 &#x2F;sparklog</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085346641.png" alt="image-20230609085346641"></p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085358426.png" alt="image-20230609085358426"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085346641.png" alt="image-20230609085346641"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085358426.png" alt="image-20230609085358426"></p>
 <p>5）配置spark-defaults.conf</p>
 <p>mv spark-defaults.conf.template spark-defaults.conf</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085422575.png" alt="image-20230609085422575"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085422575.png" alt="image-20230609085422575"></p>
 <p>在文件中追加以下内容</p>
 <p># 开启spark的日期记录功能</p>
 <p>spark.eventLog.enabled 	true</p>
@@ -208,49 +208,49 @@
 <p>spark.eventLog.dir	 hdfs:&#x2F;&#x2F;node1:8020&#x2F;sparklog&#x2F; </p>
 <p># 设置spark日志是否启动压缩</p>
 <p>spark.eventLog.compress 	true</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085447032.png" alt="image-20230609085447032"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085447032.png" alt="image-20230609085447032"></p>
 <p>6）配置log4j文件</p>
 <p>更改INFO为WARN</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085503175.png" alt="image-20230609085503175"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085503175.png" alt="image-20230609085503175"></p>
 <p>2.分发</p>
 <p>（1）将node1上配置好的Spark分发到其他文件夹上</p>
 <p>scp -r spark-3.2.0-bin-hadoop3.2&#x2F; root@node2:&#x2F;export&#x2F;server&#x2F;</p>
 <p>scp -r spark-3.2.0-bin-hadoop3.2&#x2F; root@node3:&#x2F;export&#x2F;server&#x2F;</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085525025.png" alt="image-20230609085525025"></p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085538563.png" alt="image-20230609085538563"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085525025.png" alt="image-20230609085525025"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085538563.png" alt="image-20230609085538563"></p>
 <p>（2）在node2和node3上设置软链接</p>
 <p>ln -s spark-3.2.0-bin-hadoop3.2&#x2F; spark</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085605843.png" alt="image-20230609085605843"></p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085616165.png" alt="image-20230609085616165"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085605843.png" alt="image-20230609085605843"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085616165.png" alt="image-20230609085616165"></p>
 <p>3.配置三台虚拟机的&#x2F;etc&#x2F;profile文件</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085636259.png" alt="image-20230609085636259"></p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085647913.png" alt="image-20230609085647913"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085636259.png" alt="image-20230609085636259"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085647913.png" alt="image-20230609085647913"></p>
 <p>4.启动spark的master和worker进程</p>
 <p>sbin&#x2F;start-all.sh</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085709858.png" alt="image-20230609085709858"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085709858.png" alt="image-20230609085709858"></p>
 <p>5.查看进程</p>
 <p>node1：</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085728912.png" alt="image-20230609085728912"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085728912.png" alt="image-20230609085728912"></p>
 <p>node2：</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085754199.png" alt="image-20230609085754199"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085754199.png" alt="image-20230609085754199"></p>
 <p>node3：</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085812235.png" alt="image-20230609085812235"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085812235.png" alt="image-20230609085812235"></p>
 <p>6.查看master的web ui</p>
 <p>因为spark配置过程中，默认端口master设置了8080，所以登录到node1:8080网址上</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085829903.png" alt="image-20230609085829903"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085829903.png" alt="image-20230609085829903"></p>
 <p>7.链接到StandAlone集群</p>
 <p>（1）pyspark</p>
 <p>.&#x2F;pyspark –master spark:&#x2F;&#x2F;node1:7077</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085850417.png" alt="image-20230609085850417"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085850417.png" alt="image-20230609085850417"></p>
 <p>（2）spark-shell</p>
 <p>1）.&#x2F; spark-shell –master spark:&#x2F;&#x2F;node1:7077</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085917800.png" alt="image-20230609085917800"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085917800.png" alt="image-20230609085917800"></p>
 <p>（3）spark-submit (PI)</p>
 <p>.&#x2F;spark-submit –master spark:&#x2F;&#x2F;node1:7077 &#x2F;export&#x2F;server&#x2F;spark&#x2F;examples&#x2F;src&#x2F;main&#x2F;python&#x2F;pi.py 100</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085936012.png" alt="image-20230609085936012"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085936012.png" alt="image-20230609085936012"></p>
 <p>8.查看历史服务器web ui</p>
 <p>打开浏览器</p>
-<p><img src="/.%5C%E5%9B%BE%E7%89%87%5Cimage-20230609085953096.png" alt="image-20230609085953096"></p>
+<p><img src="/.%5Cmd%E5%9B%BE%5Cimage-20230609085953096.png" alt="image-20230609085953096"></p>
 
 	</div>
 </article>
