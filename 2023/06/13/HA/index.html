@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,inital-scale=1,user-scalable=no">
-  <title>git [ Hexo ]</title>
+  <title>HA [ Hexo ]</title>
   <!-- bootstrapcss文件 -->
  <!--  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 <!--   
@@ -76,7 +76,7 @@
     
 <article id="post">
 	<div class="post-title">
-  <h1>git</h1>
+  <h1>HA</h1>
   	</div>
   <div class="page-meta">
   	<span class="fa-wrap">
@@ -91,33 +91,34 @@
   	</span>
   </div>
   <div class="post-content">
-  <h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><p>1.安装git</p>
-<p>安装完成git后，右键会出现Git GUI Here和Git Bash Here</p>
-<p>安装完成tortoise后会出现下图红框中的三个</p>
-<p><img src="/../md%E5%9B%BE/4.jpg" alt="4"></p>
-<h2 id="2-git初始化"><a href="#2-git初始化" class="headerlink" title="2.git初始化"></a>2.git初始化</h2><p>1）新建测试文件夹test</p>
-<p>2）进入文件夹，右键创建版本库</p>
-<p>然后就可以看到test文件上多了一个绿色的小对号图标</p>
-<p><img src="/../md%E5%9B%BE/5.jpg" alt="5"></p>
-<p>同时test文件下会生成一个.git隐藏文件</p>
-<h2 id="3-git操作本地仓库"><a href="#3-git操作本地仓库" class="headerlink" title="3.git操作本地仓库"></a>3.git操作本地仓库</h2><p>（1）初始化仓库（以test仓库为例）</p>
-<p>（2）添加文件</p>
-<p>1）创建helloworld.txt文件</p>
-<p>2）将文件进行添加</p>
-<p>（3）提交</p>
-<p>提交文件到本地仓库</p>
-<p><img src="/../md%E5%9B%BE/6.jpg" alt="6"></p>
-<p>提交完成后helloworld.txt生成了一个小绿色对号</p>
-<p>4.git操作本地仓库（分支）</p>
-<p>（1）创建分支</p>
-<p>（2）查看分支</p>
-<p><img src="/../md%E5%9B%BE/7.jpg" alt="7"></p>
-<p>5.远程仓库</p>
-<p>（1）创建远程仓库</p>
-<p>把ssh地址复制下来：<a target="_blank" rel="noopener" href="https://gitee.com/miugao/gittest2.git">https://gitee.com/miugao/gittest2.git</a></p>
-<p>（2）推送本地代码到远端</p>
-<p>（3）到远端查看</p>
-<p><img src="/../md%E5%9B%BE/8.jpg" alt="8"></p>
+  <p>Spark Stand Alone HA环境搭建</p>
+<p>Spark Standalone HA用于提高 Spark 集群的可用性和容错能力。此部署方式使用多个 Spark master节点来实现故障切换和负载均衡，从而确保即使某个节点发生故障或者停机，Spark 集群仍然可以继续工作。</p>
+<p>1.修改spark-env.sh</p>
+<p>删除文件中的SPARK_MASTER_HOST&#x3D;node1</p>
+<p><img src="D:\jcyblog\source\md图\15.jpg" alt="img"> </p>
+<p>增加</p>
+<p>SPARK_DAEMON_JAVA_OPTS&#x3D;”-Dspark.deploy.recoveryMode&#x3D;ZOOKEEPER -Dspark.deploy.zookeeper.url&#x3D;node1:2181,node2:2181,node3:2181 -Dspark.deploy.zookeeper.dir&#x3D;&#x2F;spark-ha”</p>
+<p># spark.deploy.recoveryMode 指定HA模式 基于Zookeeper实现</p>
+<p># 指定Zookeeper的连接地址</p>
+<p># 指定在Zookeeper中注册临时节点的路径</p>
+<p>2.把node1上配置好的spark-env.sh发送到node2和node3上</p>
+<p>scp spark-env.sh node2:&#x2F;export&#x2F;server&#x2F;spark&#x2F;conf&#x2F;</p>
+<p>scp spark-env.sh node3:&#x2F;export&#x2F;server&#x2F;spark&#x2F;conf&#x2F;</p>
+<p><img src="D:\jcyblog\source\md图\16.jpg" alt="img"> </p>
+<p>3.首先要保证三台虚拟机上当前的standalone集群是停止的</p>
+<p>sbin&#x2F;stop-all.sh </p>
+<p>4.启动集群</p>
+<p>（1）在node1上 启动一个master 和全部worker</p>
+<p>sbin&#x2F;start-all.sh</p>
+<p><img src="D:\jcyblog\source\md图\17.jpg" alt="image-20230609102252178"></p>
+<p>（2）在node2上启动一个备用的master进程</p>
+<p>sbin&#x2F;start-master.sh </p>
+<p><img src="D:\jcyblog\source\md图\18.jpg" alt="img"> </p>
+<p>5.master注备切换</p>
+<p>（1）提交spark任务到alivemaster上</p>
+<p>bin&#x2F;spark-submit –master spark:&#x2F;&#x2F;node1:7077 &#x2F;export&#x2F;server&#x2F;spark&#x2F;examples&#x2F;src&#x2F;main&#x2F;python&#x2F;pi.py 1000</p>
+<p>提交完成后kill掉node1的master</p>
+<p><img src="D:\jcyblog\source\md图\19.jpg" alt="img"></p>
 
 	</div>
 </article>
